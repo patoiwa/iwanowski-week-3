@@ -1,0 +1,39 @@
+#main-container div, .normal-container div, #more-news{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 550px;
+    padding: 5px;
+    margin-top: 15px;
+    border-bottom: lightgray 2px solid;
+}
+#add-2{
+    display: none;
+}
+#more-news{
+    max-width: 550px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: cornflowerblue;
+    align-items: left;
+}
+#more-news h3{
+    padding: 10px;
+    font-weight: bold;
+    font-size: 22px;
+    color: black;
+    background-color: cornflowerblue;
+}
+#more-news a{
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: cornflowerblue;
+}
+#more-news li{
+    padding: 5px;
+    background-color: cornflowerblue;
+    border-bottom: lightgray 1.5px solid;
+}

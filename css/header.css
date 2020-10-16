@@ -1,0 +1,23 @@
+#add-1 a{
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+}
+#add-1{
+    background-color: blue;
+    width: 100%;
+}
+h1{
+    text-align: center;
+    padding: 20px;
+    color: blue;
+    font-size: 45px;
+    font-weight: bold; 
+    text-transform: uppercase; 
+    background-color: orange; 
+}
+#header-container{
+    width: 100%;
+    background-color: orange;
+    border-bottom: darkgreen 8px solid;
+}

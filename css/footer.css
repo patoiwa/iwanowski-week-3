@@ -1,0 +1,27 @@
+#socialmedia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    height: 200px;
+    margin: auto;
+    padding: 10px;
+    background-color: lightslategray;
+}
+#socialmedia p{
+    padding: 10px;
+    font-weight: bold;
+    font-size: 26px;
+    background-color: lightslategray;
+}
+#socialmedia img, #socialmedia a{
+    width:35px;
+    height: auto;
+    padding: 5px;
+    background-color: lightslategray;
+}
+#socialmedia a:hover{
+    opacity: 0.5;
+}
+
+    
