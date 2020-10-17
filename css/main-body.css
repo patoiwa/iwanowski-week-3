@@ -14,7 +14,32 @@
         max-width: 768px;
         width: 100%;
     }
-  }
+}
+@media only screen and (min-width: 768px) {
+    #main-container, #normal-container{
+        display: flex;
+        flex-direction: row;
+        align-items:flex-end;
+        border-bottom: lightgray 2px solid;
+    }
+    #main-container div, #normal-container div{
+        width: 25%;
+        border-bottom: none;
+    }
+    #main-news{
+        display: flex;
+        flex-grow: 2;
+    }
+}
+@media only screen and (min-width: 768px) {
+    #main-news-2-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 15px;
+        border-bottom:lightgray 2px solid;
+    }
+}
 #add-2{
     display: none;
 }
@@ -22,10 +47,33 @@
     #add-2{
         display: flex;
         justify-content: center;
-        margin: auto;
         padding: 10px;
     }
-  }
+    #add-2 img{
+        height: 400px;
+        width: auto;
+    }
+}
+#main-news-2{
+    display: none;
+}
+@media only screen and (min-width: 768px) {
+    #main-news-2{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        max-width: 650px;
+    }
+    #main-news-2 img{
+        max-width: 700px;
+        height: auto;
+    }
+}
+#smaller-news-and-add-frame{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 .smaller-news-container{
     display: flex;
     flex-direction: row;
@@ -39,7 +87,7 @@
     .smaller-news-container{
         max-width: 768px;
     }
-  }
+}
 .smaller-news{
     max-width: 250px;
     display: block;
@@ -63,7 +111,43 @@
     .smaller-news a{
         font-size: 25px;
     }
-  }
+}
+@media only screen and (min-width: 600px) {
+    .smaller-news, .smaller-news img{
+        max-width: 350px;
+        width: 100%;
+    }
+    .smaller-news a{
+        font-size: 25px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .smaller-news-container{
+        width: 45%;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-left: 0px;
+        margin-right: 0px; 
+    }
+    .smaller-news, .smaller-news img{
+        justify-content: center;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+#add-3{
+display: none;
+}
+@media only screen and (min-width: 600px) {
+    #add-3{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        padding: 10px;
+    }
+}
 #more-news{
     display: flex;
     flex-direction: column;
@@ -106,7 +190,4 @@
     #more-news a{
         font-size: 22px;
     }
-  }
-#add-3{
-    display: none;
 }
