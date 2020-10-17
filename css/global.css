@@ -2,20 +2,27 @@
     font-weight: Arial, Verdana, sans-serif;
     background-color:#f1f1f1;
 }
-
 img{
     max-width: 550px;
     height: auto;
     margin: auto;
 }
-
 h2{
     padding: 5px;
     font-weight: bold;
     font-size: 25px;
 }
-
-p{
-    padding: 5px;
-    font-size: 16px; 
+a{
+    text-decoration: none;
+    color: black;
 }
+p{
+    display: none;
+}
+@media only screen and (min-width: 600px) {
+    p{
+        display: block;
+        padding: 5px;
+        font-size: 18px; 
+    }
+  }
