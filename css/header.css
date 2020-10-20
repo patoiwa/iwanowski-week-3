@@ -8,16 +8,40 @@
     width: 100%;
 }
 h1{
-    text-align: center;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     color: blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 45px;
     font-weight: bold; 
     text-transform: uppercase; 
     background-color: orange; 
 }
 #header-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
     width: 100%;
     background-color: orange;
     border-bottom: darkgreen 8px solid;
+}
+#header-container img{
+    padding-left: 5px;
+    padding-right: 10px;
+    background-color: orange;
+}
+#header-container div{
+    background-color: orange;
+}
+@media only screen and (min-width: 768px) {
+    #header-container img{
+        display: none;
+    }
+    h1{
+        font-size: 65px;
+    }
+    #header-container{
+        justify-content: center;
+    }
 }

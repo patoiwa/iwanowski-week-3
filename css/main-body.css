@@ -1,19 +1,18 @@
-#main-container div, #normal-container div{
+#main-container div, #normal-container div, #main-container img, #normal-container img{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: auto;
-    max-width: 550px;
+    max-width: 768px;
+    width: 100%;
     padding: 5px;
     margin-top: 15px;
     border-bottom: lightgray 2px solid;
 }
-@media only screen and (min-width: 600px) {
-    #main-container div, #main-container img, #normal-container div, #normal-container img{
-        max-width: 768px;
-        width: 100%;
-    }
+#main-container img, #normal-container img{
+    border-bottom: none;
 }
 @media only screen and (min-width: 768px) {
     #main-container, #normal-container{
@@ -22,16 +21,21 @@
         align-items:flex-end;
         border-bottom: lightgray 2px solid;
     }
-    #main-container div, #normal-container div{
+    #main-container div{
         width: 25%;
         border-bottom: none;
+    }
+    #normal-container div{
+        width: 32%;
+        border-bottom: none;
+    }
+    #main-container img, #normal-container img{
+        max-width: 100%;
     }
     #main-news{
         display: flex;
         flex-grow: 2;
     }
-}
-@media only screen and (min-width: 768px) {
     #main-news-2-container{
         display: flex;
         flex-direction: row;
@@ -77,16 +81,10 @@
 .smaller-news-container{
     display: flex;
     flex-direction: row;
-    max-width: 600px;
+    max-width: 768px;
     justify-content: center;
     align-items: center;
-    margin: auto;
     border-bottom: lightgray 2px solid;
-}
-@media only screen and (min-width: 600px) {
-    .smaller-news-container{
-        max-width: 768px;
-    }
 }
 .smaller-news{
     max-width: 250px;
@@ -111,8 +109,6 @@
     .smaller-news a{
         font-size: 25px;
     }
-}
-@media only screen and (min-width: 600px) {
     .smaller-news, .smaller-news img{
         max-width: 350px;
         width: 100%;
@@ -144,7 +140,8 @@ display: none;
     #add-3{
         display: flex;
         justify-content: center;
-        margin: auto;
+        margin-left: 15px;
+        margin-right: 15px;
         padding: 10px;
     }
 }
