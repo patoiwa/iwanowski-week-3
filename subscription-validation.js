@@ -14,6 +14,7 @@ var postalCode = document.getElementById('postal-code');
 var dni = document.getElementById('dni');
 var email = document.getElementById('email');
 var subsBtn = document.getElementById('subscribeButton');
+var hello = document.getElementById('hello');
 
 //General Functions
 function checkLength(a, minLength, maxLength) {
@@ -224,3 +225,11 @@ email.addEventListener('focus', removeMessage);
 
 //Click
 subsBtn.onclick = validateEnter;
+
+//Bonus 
+nameVar.addEventListener('keydown', helloUser);
+function helloUser(){
+    hello.nextElementSibling.remove();
+    hello.insertAdjacentHTML("afterend", '<h2>' + nameVar.value + '</h2>');
+}
+nameVar.addEventListener('blur', helloUser);
