@@ -1,4 +1,4 @@
-#socialmedia{
+#socialmedia, .subscribe{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,6 +21,9 @@
 }
 #socialmedia a:hover{
     opacity: 0.5;
+}
+.subscribe img{
+    max-width: 300px;
 }
 
     
