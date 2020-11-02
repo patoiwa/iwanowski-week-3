@@ -101,10 +101,9 @@ function validatePass (e){
     errorM = " Error: the password must contain at least 8 characters: leters and numbers ";
     if(((checkLength(e.target.value,8,16))&&(checkCharactersNotAll(e.target.value,arrayLetters))) && checkCharactersNotAll(e.target.value, arrayNumbers)){
         //console.log('no error'); Tester
-        errorMessage(e.target, "");
         removeGlobalErrors(errorM);
     }else{
-        errorMessage(e.target, errorM);
+        errorMessage(e.target);
         checkGlobalErrors(errorM);
     }
     //console.log(submitErrors); 
@@ -113,11 +112,10 @@ function validateAge(e){
     errorM = " Error: you must be over 18 years old to subscribe";
     if ((parseInt(e.target.value, 10) >= 18)  && (checkCharacters(e.target.value, arrayLetters, false))){
         //console.log("no error");  Tester
-        errorMessage(e.target, "");
         removeGlobalErrors(errorM);
     }else{
         //console.log("Error"); Tester 
-        errorMessage(e.target, errorM);
+        errorMessage(e.target);
         checkGlobalErrors(errorM);
     } 
     //console.log(submitErrors); 
@@ -126,11 +124,10 @@ function validatePhone(e){
     errorM = " Error: the phone number must be at least 7 digits and not contain any symbols";
     if (checkCharacters(e.target.value, arrayLetters, false) && checkCharacters(e.target.value,[' ','-','(',')'], false) && checkLength(e.target.value,7,20)){
         //console.log("no error");  Tester
-        errorMessage(e.target, "");
         removeGlobalErrors(errorM);
     }else{
         //console.log("Error"); Tester 
-        errorMessage(e.target, errorM);
+        errorMessage(e.target);
         checkGlobalErrors(errorM);
     } 
     //console.log(submitErrors); 
@@ -139,11 +136,10 @@ function validateAdress(e){
     errorM = " Error: the adress must contain at least 5 characters: leters, numbers and a space ";
     if (checkLength(e.target.value, 5,50) && checkCharactersNotAll(e.target.value,arrayLetters) && checkCharactersNotAll(e.target.value,arrayNumbers) && checkCharacters(e.target.value,[' '],true)){
         //console.log("no error");  Tester
-        errorMessage(e.target, "");
         removeGlobalErrors(errorM);
     }else{
         //console.log("Error"); Tester 
-        errorMessage(e.target, errorM);
+        errorMessage(e.target);
         checkGlobalErrors(errorM);
     } 
     //console.log(submitErrors); 
@@ -152,11 +148,10 @@ function validateCityAndPostal(e){
     errorM = " Error: City or Postal Code must have at leats 3 characters ";
     if (checkLength(e.target.value,3,50)){
         //console.log("no error");  Tester
-        errorMessage(e.target, "");
         removeGlobalErrors(errorM);
     }else{
         //console.log("Error"); Tester 
-        errorMessage(e.target, errorM);
+        errorMessage(e.target);
         checkGlobalErrors(errorM);
     } 
     //console.log(submitErrors); 
@@ -165,11 +160,10 @@ function validateDni(e){
     errorM = " Error: DNI must contain between 7 and 8 numbers ";
     if (checkLength(e.target.value,7,8) && checkCharacters(e.target.value,arrayLetters,false)){
         //console.log("no error");  Tester
-        errorMessage(e.target, "");
         removeGlobalErrors(errorM);
     }else{
         //console.log("Error"); Tester 
-        errorMessage(e.target, errorM);
+        errorMessage(e.target);
         checkGlobalErrors(errorM);
     } 
     //console.log(submitErrors); 
@@ -178,11 +172,10 @@ function validateEmail(e){
     errorM = " Error: must be a valid email format ";
     if (checkCharacters(e.target.value,['@','.com'],true)){
         //console.log("no error");  Tester
-        errorMessage(e.target, "");
         removeGlobalErrors(errorM);
     }else{
         //console.log("Error"); Tester 
-        errorMessage(e.target, errorM);
+        errorMessage(e.target);
         checkGlobalErrors(errorM);
     } 
     //console.log(submitErrors); 
