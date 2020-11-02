@@ -1,6 +1,7 @@
 .form-main-container{
     display: flex;
     flex-direction: row;
+    width: 95%;
     flex-wrap: wrap;
     padding: 10px;
 }
@@ -24,24 +25,39 @@
 .form-large{
     display: flex;
     flex-direction: column;
-    flex-grow: 2;
+    width: 95%;
+    min-width: 250px;
+    margin: auto;
     padding: 10px;
     padding-top: 0px;
 }
 .enter-button{
     display: flex;
-    flex-grow: 2;
     margin: auto;
-    width: 90%;
+    width: 95%;
+    min-width: 250px;
     padding: 10px;
 }
 .enter-button input{
     display: flex;
-    flex-grow: 2;
     justify-content: center;
     align-content: center;
     width: 100%;
+    min-width: 250px;
+    margin: auto;
     padding: 10px;
     font-weight: bold;
     font-size: 20px;
+}
+@media only screen and (max-width: 525px) {
+    .enter-button, .form-large {
+        flex-grow: 1;
+        max-width: 250px;
+    }
+}
+.hidden{
+    visibility: hidden;
+}
+.danger{
+    border: solid 2px red ;
 }

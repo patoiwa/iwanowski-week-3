@@ -46,35 +46,35 @@
             <div class="form-col">
                 <label  for="Name">Name</label>
                 <input  type="text" name="name" placeholder="Insert Name and Lastname">
-                <div></div>    
+                <div class="hidden"><p>" Error: the name must contain at least 6 leters and have an space "</p></div>    
                 <label for="password">Password</label>
-                <input id="password" type="text" placeholder="Insert Password">
-                <div></div>
+                <input id="password" type="password" placeholder="Insert Password">
+                <div class="hidden"><p>" Error: the password must contain at least 8 characters: leters and numbers "</p></div>
                 <label for="age">Age</label>
                 <input id="age" type="text" placeholder="Insert Age">
-                <div></div>    
+                <div class="hidden"><p>" Error: you must be over 18 years old to subscribe"</p></div>    
                 <label for="phone-number">Phone Number</label>
                 <input id="phone" type="text" placeholder="Insert Phone Number"> 
-                <div></div>   
+                <div class="hidden"><p>"Error: phone number must be at least 7 digits and contain no symbols"</p></div>   
             </div>
             <div class="form-col">
                 <label for="adress">Adress</label>
                 <input id="adress" type="text" placeholder="Insert Adress">
-                <div></div>
+                <div class="hidden"><p>"Error: adress must contain at least 5 characters: leters, numbers and a space"</p></div>
                 <label for="city">City</label>
                 <input id="city" type="text" placeholder="Insert City">
-                <div></div>
+                <div class="hidden"><p>" Error: City must have at leats 3 characters "</p></div>
                 <label for="postal-code">Postal Code</label>
                 <input id="postal-code" type="text" placeholder="Insert Postal Code">
-                <div></div>
+                <div class="hidden"><p>" Error: Postal Code must have at leats 3 characters "</p></div>
                 <label for="dni">DNI</label>
                 <input id="dni" type="text" placeholder="Insert DNI">
-                <div></div>
+                <div class="hidden"><p>" Error: DNI must contain between 7 and 8 numbers "</p></div>
             </div>
             <div class="form-large">
                 <label for="email">Mail</label>
                 <input id="email" type="text" placeholder="Insert Email">
-                <div></div>
+                <div class="hidden"><p>" Error: must be a valid email format "</p></div>
             </div>
             <div class="enter-button">
                 <input id="subscribeButton" type="button" value="Subscribe">

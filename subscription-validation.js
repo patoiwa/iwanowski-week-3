@@ -56,11 +56,13 @@ function checkCharactersNotAll(a, arrayCharacters){
     }
     return false;
 }
-function errorMessage (target, error) {
-    target.insertAdjacentHTML("afterend", '<p>' + error + '</p>');
+function errorMessage (target) {
+    target.nextElementSibling.classList.remove('hidden');
+    target.classList.add('danger');
 }
 function removeMessage(e){
-    e.target.nextElementSibling.remove()
+    e.target.nextElementSibling.classList.add('hidden');
+    e.target.classList.remove('danger');
 }
 function checkGlobalErrors (errorM){
     counterOfMessages = 0;    
@@ -87,14 +89,13 @@ function validateName(e){
     errorM = " Error: the name must contain at least 6 leters and have an space ";
     if ( (checkLength(e.target.value, 7, 80)) && (checkCharacters(e.target.value, [" "], true)) && (checkCharacters(e.target.value,arrayNumbers,false))){
         //console.log("no error");  Tester
-        errorMessage(e.target, "");
         removeGlobalErrors(errorM);
     }else{
         //console.log("Error"); Tester    
-        errorMessage(e.target, errorM);
+        errorMessage(e.target);
         checkGlobalErrors(errorM);
     }
-    console.log(submitErrors);  
+    //console.log(submitErrors);  
 }
 function validatePass (e){
     errorM = " Error: the password must contain at least 8 characters: leters and numbers ";
@@ -106,7 +107,7 @@ function validatePass (e){
         errorMessage(e.target, errorM);
         checkGlobalErrors(errorM);
     }
-    console.log(submitErrors); 
+    //console.log(submitErrors); 
 }
 function validateAge(e){
     errorM = " Error: you must be over 18 years old to subscribe";
@@ -119,7 +120,7 @@ function validateAge(e){
         errorMessage(e.target, errorM);
         checkGlobalErrors(errorM);
     } 
-    console.log(submitErrors); 
+    //console.log(submitErrors); 
 }
 function validatePhone(e){
     errorM = " Error: the phone number must be at least 7 digits and not contain any symbols";
@@ -132,7 +133,7 @@ function validatePhone(e){
         errorMessage(e.target, errorM);
         checkGlobalErrors(errorM);
     } 
-    console.log(submitErrors); 
+    //console.log(submitErrors); 
 }
 function validateAdress(e){
     errorM = " Error: the adress must contain at least 5 characters: leters, numbers and a space ";
@@ -145,7 +146,7 @@ function validateAdress(e){
         errorMessage(e.target, errorM);
         checkGlobalErrors(errorM);
     } 
-    console.log(submitErrors); 
+    //console.log(submitErrors); 
 }
 function validateCityAndPostal(e){
     errorM = " Error: City or Postal Code must have at leats 3 characters ";
@@ -158,7 +159,7 @@ function validateCityAndPostal(e){
         errorMessage(e.target, errorM);
         checkGlobalErrors(errorM);
     } 
-    console.log(submitErrors); 
+    //console.log(submitErrors); 
 }
 function validateDni(e){
     errorM = " Error: DNI must contain between 7 and 8 numbers ";
@@ -171,7 +172,7 @@ function validateDni(e){
         errorMessage(e.target, errorM);
         checkGlobalErrors(errorM);
     } 
-    console.log(submitErrors); 
+    //console.log(submitErrors); 
 }
 function validateEmail(e){
     errorM = " Error: must be a valid email format ";
@@ -184,7 +185,7 @@ function validateEmail(e){
         errorMessage(e.target, errorM);
         checkGlobalErrors(errorM);
     } 
-    console.log(submitErrors); 
+    //console.log(submitErrors); 
 }
 function validateEnter(e){
     e.preventDefault();
@@ -196,7 +197,7 @@ function validateEnter(e){
     }else {
         alert(submitErrors);
     }
-    console.log(submitErrors); 
+    //console.log(submitErrors); 
 }
 
 //Event Listeners
